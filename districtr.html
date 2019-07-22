@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" type="image/png" href="favicon.ico">
+     <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-128973402-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-128973402-1");
+  </script>
+  <title>
+  	What is redistricting? 
+        | Metric Geometry and Gerrymandering Group
+  </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <meta
+      name="description"
+      content="A nonpartisan research organization studying applications of geometry and computing to U.S. redistricting."
+      /> 
+    <link rel="canonical" href="https://mggg.org/distflow/" />
+    <link
+href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Lora:400,400i,700|Source+Sans+Pro:300,400"
+rel="stylesheet"
+/>
+<link rel="stylesheet" href="style.css" />
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv"
+crossorigin="anonymous"
+/>
+<script
+defer
+src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+crossorigin="anonymous"
+></script>
+<script
+defer
+src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
+integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF"
+crossorigin="anonymous"
+onload="renderMathInElement(document.body, {delimiters: [
+	{left: '$', right: '$', display: false}
+	]});"
+	></script>
+</head>
+
+<body>
+	 <script>
+            if (window.location.pathname === "/distflow") {
+                window.location.href = "https://mggg.org/distflow/";
+            }
+        </script>
+    <div class="banner">
+      <a href="/">
+        <img
+          class="logo"
+          src="/assets/logo.svg"
+          alt="Metric Geometry and Gerrymandering Group"
+        />
+      </a>
+  </div> 
+  <header>
+  	<h1>How hard is redistricting?</h1>
+  	<p class="subtitle">
+  		A basic note on hardness of redistricting
+  	</p>
+  	<summary>
+  		This project uses <em> districtr </em> to show the hardness of non-partisan redistricting.
+  	</summary>
+  </header>
+
+
+
+  <main>
+  	<section>
+  		<p>
+  			Redistricting is all about drawing lines in a state to divide it into: (i) contiguous, and (ii) (roughly) same populated areas. 
+        This process occurs every 10 years and after the census determines the number of representatives in each state based on its
+        population. Although there exists some other constitutional measures (rather than contiguity and population balance) to assess
+        a redistricting plan, they look like general rules that are not specified precisely (in some states, the legislature use the 
+        term “to the extent practicable” for some measures (even for population balance)).
+      </p> 
+      <p>  
+        Do you like to craft non-partisan redistricting for your state? OK! Let’s choose your state and redistrict it!
+  		</p>
+      
+      <p>
+      [put the link of districtr here!]
+      </p>
+      
+      <p>
+      How was it? Hard? Easy? Did you like it?
+      </p>
+
+  		<p>
+  			Redistricting is a hard problem even if you consider population bound as the only constraint
+        on the redistricting map. It means that as the size of your redistricting instance increases, 
+        it becomes harder to be solved (even for super computers). 
+  		</p>
+      
+      <p>  
+       Now, we discuss on a well-known bright-line rule for non-partisan redistricting. It is population balance!
+  		</p>
+      
+      <p>  
+      <b>Population balance</b>
+  		</p>
+      <p>
+      Different states consider various rules on their population bounds of their districts. First, we introduce different population deviations.
+      </p>
+      <p>
+      <ol>
+        <li> <b>Singular deviation</b>: This is the deviation from the ideal population for every district.</li>
+        <li> <b>Total deviation</b>: This is the summation of deviations from ideal population for all districts.</li>
+      </ol>
+      </p>
+      <p>
+      For more information on population bound, click <a href="https://www.brennancenter.org/sites/default/files/legacy/CGR%20Reprint%20Single%20Page.pdf">here</a>. Here are some 
+      population bounds for some states based on <a href="https://www.brennancenter.org/sites/default/files/legacy/CGR%20Reprint%20Single%20Page.pdf">A Citizen's Guide To Redistricting</a>.
+      </p>
+      <table style="width:100%">
+  <tr align="center">
+    <th>State</th>
+    <th># of districts</th> 
+    <th>Accepted Deviation</th>
+  </tr>
+  <tr align="center">
+    <td>CO</td>
+    <td>7</td> 
+    <td> <= 5% total population</td>
+  </tr>
+  <tr align="center">
+    <td>IA</td>
+    <td>4</td> 
+    <td><= 5% total population</td>
+  </tr>
+  <tr align="center">
+    <td>MN</td>
+    <td>8</td> 
+    <td> <= 2% from ideal population</td>
+  </tr>
+  <tr align="center">
+    <td>MT</td>
+    <td>8</td> 
+    <td> <= 1% from ideal population</td>
+  </tr>
+  <tr align="center">
+    <td>UT</td>
+    <td>4</td> 
+    <td> <= 4% from ideal population</td>
+  </tr>
+  <tr align="center">
+    <td>VA</td>
+    <td>11</td> 
+    <td> <= 2% from ideal population</td>
+  </tr>  
+</table>
+
+<p>
+Now try to respect these bounds to find a feasible districting map for the aforementioned states!
+</p>
+
+</body>
+</html>
+
+
