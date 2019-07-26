@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title> Redistricting Rules | Districtr</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./css/chicago.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Playfair+Display:700"
+            rel="stylesheet"
+        />
+        
+    </head>
+    
+    <head>
+    <link
+    href="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css"
+    rel="stylesheet"
+/>
+<link
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600"
+    rel="stylesheet"
+/>
+<link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+/>
+<link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous"
+/>
+<link
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+    href="https://deploy-preview-59--districtr.netlify.com/css/embedded.css"
+/>
+
+<link
+    href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Lora:400,400i,700|Source+Sans+Pro:300,400"
+    rel="stylesheet"
+/>
+<script src="https://deploy-preview-59--districtr.netlify.com/es6/embedded.js"></script>
+    </head>
+    
+    <head>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+</head>
+
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+    
+
+    <body>
+        <main id="root" class="place">
+            <article class="place__content">
+                <h1 class="headline place__name">Redistricting Rules</h1>
+                 <p align= "justify">
+                      Every ten years, the United States government attempts to count every person living in the country, something known as the Census.
+                      After the Census, states are required to redraw the districts of their state and federal legislatures in order to account
+                      for the change in population and movement of people across the country. Although all states are redraw districts after 
+                      the Census, the rules for redistricting vary greatly from state to state.
+                      This article asks users to interact with <a href="https://districtr.org/">Districtr</a> and <a href="https://www.brennancenter.org/sites/default/files/legacy/CGR%20Reprint%20Single%20Page.pdf">A Citizen's Guide To Redistricting</a> 
+                      to learn about the different rules of redistricting. 
+                    </p> 
+                <h2 class="place__subheading">Population Balance</h2>
+                    <p align= "justify">
+                        Population balance is one of the few rules of redistricting that is clear-cut and followed by every state.
+                        In a series of cases known as the “one person, one vote” cases, the Supreme Court ruled that each district’s
+                        population must be about equal.
+                    </p>
+                    <p align= "justify">
+                       A balanced population has a different meaning depending on the state. Thus, population deviation is an important
+                      part of ensuring that each district adheres to the state's respective definition. 
+                    </p>
+                    <p align= "justify">
+                        Here are some basic definitions for calculating population deviations.
+                    </p>
+                    <p align= "justify">
+                            <strong>Ideal (average) population</strong> is the average population of districts in a state.
+                    </p>
+                    <p align= "justify">
+                            <strong>Deviation</strong> is the percentage by which population differs from the mean.  
+
+                    </p>
+                    <p align= "justify">
+                        <strong>Average deviation</strong> is the average of deviations of districts (i.e., ∑districts deviations/ total number of districts).
+                    </p>
+                    <p align= "justify">
+                        <strong>Total deviation</strong> is the difference between the maximum and minimum deviations (i.e., total deviation = maximum deviation - minimum deviation). 
+                    </p>
+                    <p align= "justify">Now consider a Districtr generated plan for Iowa. 
+                        </p>
+                        
+                       
+                    <img src="./assets/Iowa_graphic.png" alt="move tool" class="screenshot">
+                    <figcaption align="center"> A districting plan for Iowa. </figcaption>
+                    
+                    <p>
+                    The follwoing table shows the population deviation of each district in the above proposed map of Iowa.
+                    </p>
+                    
+                        <table style="width:100%">
+                                <tr align="center">
+                                  <th>Districts</th>
+                                  <th>Population</th> 
+                                  <th>Deviation</th>
+                                </tr>
+                                <tr align="center">
+                                  <td>1</td>
+                                  <td>706,972</td> 
+                                  <td> 7.17%</td>
+                                </tr>
+                                <tr align="center">
+                                  <td>2</td>
+                                  <td>808,388</td> 
+                                  <td> -6.14% </td>
+                                </tr>
+                                <tr align="center">
+                                  <td>3</td>
+                                  <td>846,209</td> 
+                                  <td> -11.11%</td>
+                                </tr>
+                                <tr align="center">
+                                  <td>4</td>
+                                  <td>684,786</td> 
+                                  <td>10.08%</td>
+                                </tr>
+                                <tr align="center">
+                                  <td>Average</td>
+                                  <td>761,588.75</td> 
+                                  <td>8.63%</td>
+                                </tr>
+                                <tr align="center">
+                                  <td>Total</td>
+                                  <td>3,046,355</td> 
+                                  <td>21.20%</td>
+                                </tr>  
+                              </table>
+                              
+     <p>                         
+     For more information on population bound, click <a href="https://www.brennancenter.org/sites/default/files/legacy/CGR%20Reprint%20Single%20Page.pdf">here</a>. Below are some 
+      population bounds that show the variety of definitions of population deviations for some states based on <a href="https://www.brennancenter.org/sites/default/files/legacy/CGR%20Reprint%20Single%20Page.pdf">A Citizen's Guide To Redistricting</a>.
+      </p>
+      
+      <table style="width:100%">
+  <tr align="center">
+    <th>State</th>
+    <th># of districts</th> 
+    <th>Accepted Deviation</th>
+  </tr>
+  <tr align="center">
+    <td>CO</td>
+    <td>7</td> 
+    <td> &#8804 5% total deviation</td>
+  </tr>
+  <tr align="center">
+    <td>IA</td>
+    <td>4</td> 
+    <td> &#8804 5% total deviation</td>
+  </tr>
+  <tr align="center">
+    <td>MN</td>
+    <td>8</td> 
+    <td> &#8804 2% from ideal deviation</td>
+  </tr>
+  <tr align="center">
+    <td>MT</td>
+    <td>8</td> 
+    <td> &#8804 1% from ideal deviation</td>
+  </tr>
+  <tr align="center">
+    <td>UT</td>
+    <td>4</td> 
+    <td> &#8804 4% from ideal deviation</td>
+  </tr>
+  <tr align="center">
+    <td>VA</td>
+    <td>11</td> 
+    <td> &#8804 2% from ideal deviation</td>
+  </tr>  
+</table>
+<p>
+Now, it is your turn! Based on the above table, draw a districting plan for Iowa while respecting the population balanced! 
+<div id="districtr-box" style="width: 100%; height: 600px; margin: 2rem 0"></div>
+
+<script>
+    window.Districtr("districtr-box", {
+        url: "https://districtr.org/assets/plans/blank-iowa.json"
+    });
+</script>
+
+Maintaining a balanced population has <a href="https://www.brennancenter.org/sites/default/files/legacy/CGR%20Reprint%20Single%20Page.pdf">pros and cons</a>:
+</p> 
+  <table style="width:100%">
+  <tr align="center">
+    <th><font color="blue">Pros</font></th>
+    <th><font color="red">Cons</font></th> 
+  </tr>
+  <tr align="center">
+    <td>Each person has the same representation as every other person </td>
+    <td>Communities may need to be split up</td> 
+  </tr>
+  <tr align="center">
+    <td>Each person has the same voting power to elect a representative as every other person </td>
+    <td>Districts could end up looking strange</td> 
+  </tr>
+  <tr align="center">
+    <td>Easy standard for line-drawers to follow that is easily reviewable by courts</td>
+    <td>Harder for there to be districts that gives minority citizens the opportunity to elect a representative</td> 
+  </tr>
+</table>
+
+
+
+                <h2 class="place__subheading">Contiguity</h2>
+                <div class="header">
+                    <p align= "justify">
+                    A <b>contiguous</b> district is one where you can travel from any point to any other point
+                within the district without leaving.
+                    </p>
+                    <p align= "justify">
+                    There are two types of contiguity: (i) <b>rook</b>, and (ii) <b>queen</b>. In rook contiguity, two land parcels of a district are adjacent
+                    if they share a border, not a point. In queen contiguity, two land parcels of a district are adjacent if they share a point or a border.
+                    </p>
+                    <div class="row">
+                    <div class="column">
+                    <img src="Queen_cont.svg" alt="NorthCarolina1" style="width:100%">
+                    <figcaption align="center"> Queen </figcaption>
+                    </div>
+                    <div class="column">
+                    <img src="Rook_cont.svg" alt="NorthCarolina2" style="width:100%">
+                    <figcaption align="center"> Rook </figcaption>
+                    </div>
+                    </div>
+                    </div>
+                    
+                    <div class="row">
+                    <div class="column">
+                    <img src="Queen_districts.svg" alt="NorthCarolina1" style="width:100%">
+                    <figcaption align="center"> Green district is a queen-connected district. </figcaption>
+                    </div>
+                    <div class="column">
+                    <img src="Rook_districts.svg" alt="NorthCarolina2" style="width:100%">
+                    <figcaption align="center"> Green district is a rook-connected district. </figcaption>
+                    </div>
+                    </div>
+                    </div>
+                    <p>
+                    <b>Use the following Districtr module to fix the Mississippi districting plan so that each district is rook contiguious and the population balance is respected.</b>
+                    </p>
+                </div>
+                
+                <h2 class="place__subheading">Compactness</h2>
+                <div class="header">
+                <p align = "justify">
+                Many states have constitutional requirements that all districts must be compact in some way. However, compactness is not clearly defined when it comes
+                to redistricting. Thus, the law is open to a wide variety of interpretations.
+                </p>
+                
+                <p align = "justify">
+                The “eye-ball test” has become a convention many people use to determine compactness: if a district looks compact, then it is compact.
+                </p>
+                
+                <p align = "justify">
+                The most compact shape is a circle. Districts are difficult to draw as circles due to the geography of most states. As such, people have developed various
+                ways to quantify compactness such as the Polsby-Popper score or dispersion-based measures. For more information, consult with <a href="https://www.brennancenter.org/sites/default/files/legacy/CGR%20Reprint%20Single%20Page.pdf">A Citizen's Guide To Redistricting</a>. 
+                </p>
+                
+                <p align = "justify">
+                Cut edges is another measure of compactness that considers number of edges between different districts. The fewer number of cut edges in a districting plan,
+                the more compact it is. The following districting plans contain blue and beige districts where each district has 9 nodes but the plans have a different number of cut edges.
+                </p>
+                
+                    <div class="row">
+                    <div class="column">
+                    <img src="cut_edges1.svg" alt="cutedges1" style="width:100%">
+                    <figcaption align="center"> 
+                    Number of beige and blue nodes: 9
+                    
+                    Number of cut edges (denoted by dashed lines): 11 
+                     </figcaption>
+                    </div>
+                    <div class="column">
+                    <img src="cut_edges2.svg" alt="cutedges2" style="width:100%">
+                    <figcaption align="center"> Number of beige and blue nodes: 9
+                    Number of cut edges (denoted by dashed lines):7 
+                     </figcaption>
+                    </div>
+                    </div>
+                
+                <p align = "justify">
+                 An indication of gerrymandering in a redistricting plan are strange, snake-like districts that do not pass the eye-ball test. Below is North Carolina’s 2011
+                 redistricting plan. Federal judges ruled it unconstitutional because it unfairly favored Republicans. <b>Try to change the plan to make all of the districts more
+                compact while respecting contiguity and population balance!</b>  
+                </p>
+                  
+                    <div id="districtr-box2" style="width: 100%; height: 600px; margin: 2rem 0"></div>
+
+                    <script>
+                    window.Districtr("districtr-box2", {
+                    url: "https://districtr.org/assets/plans/districtr-nc-2011.json"
+                    });
+                    </script>
+                </div>
+                
+                <h2 class="place__subheading"> Packing and Cracking </h2>
+                <div class="header">
+                    <p align= "justify">
+                    
+                    <b>Packing</b> is cramming people with  the same partisan interest into one district to dilute their voting strength. If all of one party or demographic is<b>packed</b>
+                    into one district, then it weakens their voting power in other parts of the state.
+                    </p>
+                    <p align= "justify">
+                    <b>Cracking</b> is dividing a group of people with same partisan interest into different districts. This decreases the voting strength of the group to win a district. <b>
+                    Cracking</b> is normally implemented by splitting relatively homogenous communities.
+                    </p>
+                    <p>
+                    <img src="MS.png" alt="Mississipi" style="width:100%">
+                    <figcaption align="center"> Distribution of Mississippi's black population. </figcaption>
+                    </p>
+                    <p>
+                    Based on the map above <b>try to create a districting plan that packs the black population in Mississippi!</b>
+                    </p>
+                    <div id="districtr-box3" style="width: 100%; height: 600px; margin: 2rem 0"></div>
+                    <script>
+                    window.Districtr("districtr-box3", {
+                    url: "https://districtr.org/assets/plans/blank-ms.json"
+                    });
+                    </script>
+                    </div>
+                    <p>
+                    Below is a real world districting plan where North Carolina packs and cracks Democrats throughout the state to dilute their voting power. 
+                    </p>
+                    
+                    <div id="districtr-box4" style="width: 100%; height: 600px; margin: 2rem 0"></div>
+
+                    <script>
+                    window.Districtr("districtr-box4", {
+                    url: "https://districtr.org/assets/plans/districtr-nc-2011.json"
+                    });
+                    </script>
+                    </div>
+                    <p>
+                    Based on the map of districts in North Carolina, you can see Democrat packing in Districts 2 and 11.
+                    </p>
+
+                    <div class="row">
+                    <div class="column">
+                    <img src="NC2.PNG" alt="NorthCarolina1" style="width:95%">
+                    <figcaption align="center"> District 2 of North Carolina's 2011 map. </figcaption>
+                    </div>
+                    <div class="column">
+                    <img src="NC2partisan.PNG" alt="NorthCarolina2" style="width:100%">
+                    <figcaption align="center"> Distribution of Democrats and Republicans in District 2 of North Carolina's 2011 map. </figcaption>
+                    </div>
+                    </div>
+                    </div>
+                    
+                    <div class="row">
+                    <div class="column">
+                    <img src="NC11.PNG" alt="NorthCarolina1" style="width:95%">
+                    <figcaption align="center"> District 11 of North Carolina's 2011 map. </figcaption>
+                    </div>
+                    <div class="column">
+                    <img src="NC11partisan.PNG" alt="NorthCarolina2" style="width:100%">
+                    <figcaption align="center"> Distribution of Democrats and Republicans in District 11 of North Carolina's 2011 map. </figcaption>
+                    </div>
+                    </div>
+                    </div>
+    </body>
+</html>
